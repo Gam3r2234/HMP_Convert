@@ -27,7 +27,7 @@ The next 4 bytes are the height of the image in little endian. <br/>
 The next 4 bytes are the length of the flagmap in little endian. <br/>
 The last 4 bytes are the length of the value map in little endian.
 
-### The Flagmap <br/>
+### The Flagmap: <br/>
 The flagmap is composed of a series of bytes read from the most to least significant bit, starting from the first byte after the header and going to the last byte before the value map. <br/>
 Each bit corresponds to an instruction for decompressing the file. <br/>
 A 0 means the next 2 bytes in the value map will be interpereted as a color. <br/>
@@ -35,7 +35,7 @@ A 1 means the next 1 byte in the value map will be interpereted as an instructio
 After a whole byte is read, the next byte is looked at. No bits are ever looked at twice. <br/>
 If the number of instructions is not a multiple of 8, the remaining bits in the last byte will be filled in with zeroes.
 
-### The Value Map <br/>
+### The Value Map: <br/>
 The value map can be read two ways: as a color or as a draw instruction. <br/>
 If it is read as a color, the next two bytes will be interpreted as a 16 bit color, and 1 pixel of that color will be drawn to the screen during decompression. <br/>
 If it is read as a draw instruction, the next one byte will be split up into a draw method bit, a color choice bit, and 6 length bits.
