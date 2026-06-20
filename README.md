@@ -1,4 +1,4 @@
-# HMP Converter
+# HMP Convert
 ## Description: <br/>
 HMP Convert is a program that compresses images from any PIL supported image format into the .hmp format used by OPTWORKS games (18+). It also decompresses .hmp images into bitmap files. 
 
